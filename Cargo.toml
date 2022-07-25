@@ -1,0 +1,15 @@
+[workspace]
+
+members = [
+    "ex1_xpdf",
+]
+
+[profile.release]
+# perform link-time optimizations across all crates within the dependency graph 
+lto = true
+# controls how many "code generation units" a crate will be split into; higher codegen-units MAY produce slower code (max: 256)
+codegen-units = 1
+# controls the level of optimizations 3 == all
+opt-level = 3
+# controls the amount of debug information included in the compiled binary; true == "full debug info"
+debug = true
